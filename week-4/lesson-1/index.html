@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>FEWD | Lesson 8</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+		<link rel="stylesheet" href="../../dist/css/main.min.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="u-bg--black">
+				  <div class="slide-header">
+            <img class="logo" src="../../dist/images/ga/ga-logo-text.png" alt="General Assembly logo">
+				  </div>
+
+          <div class="content">
+            <h1>Git and Github</h1>
+						<span class="instructor">Gerry Mathe</span>
+          </div>
+				</section>
+
+				<section>
+				  <div class="slide-header">
+            <h2>Git and Github</h2>
+				  </div>
+
+          <div class="content">
+            <h2>What is Git?</h2>
+
+
+						<p>Git is:
+							<ul>
+								<li>A program you run from the command line</li>
+								<li>A distributed version control system</li>
+							</ul>
+						</p>
+
+						<p>
+							Programmers use Git so that they can keep the history of all the changes to their code. This means that they can rollback changes (or switch to older versions) as far back in time as they started using Git on their project.
+						</p>
+
+
+          </div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Git and Github</h2>
+					</div>
+
+					<div class="content">
+						<h2>What is Git?</h2>
+
+
+						<p>
+							You know how Google Docs allow you to have a "version history" and move between different versions whenever you want? Git enables you to do that with any folder - and its contents - on your computer!
+						</p>
+
+						<p>
+							A codebase in Git is referred to as a repository, or repo, for short.
+						</p>
+
+						<p>
+							Git was created by Linus Torvalds, the principal developer of Linux.
+						</p>
+
+
+
+
+
+
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Git and Github</h2>
+					</div>
+
+					<div class="content">
+						<h2>What is GitHub?</h2>
+
+						<p>GitHub is:</p>
+						<ul>
+							<li>A hosting service for Git repositories</li>
+							<li>A web interface to explore Git repositories</li>
+							<li>A social network of programmers</li>
+							<ul>
+								<li>We all have individual accounts and put our codebases on our GitHub account</li>
+								<li>You can follow users and star your favorite projects</li>
+							</ul>
+							<li>A place where developers can access public codebases</li>
+						</ul>
+
+
+					</div>
+				</section>
+
+
+				<section>
+					<div class="slide-header">
+						<h2>Git and Github</h2>
+					</div>
+
+					<div class="content">
+						<h2>Can you use git without GitHub?</h2>
+
+						<p>
+							Git is a software that enables version control on local folders on your machine. GitHub is a place to host your Git repositories, remotely. You can certainly have local files, that are using Git, that are not sent to or stored on GitHub.
+						</p>
+
+
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Why is Git tricky to understand?</h2>
+					</div>
+
+					<div class="content">
+						<h2>Why is Git tricky to understand?</h2>
+
+						<ul>
+							<li>Working Directory: like any other folder on your machine; just holds the actual files</li>
+							<li>Index: acts as a staging area (an area that holds files "ready" to be versioned)</li>
+							<li>HEAD: points to the last commit you've made (the last "version" of the code you've stored using git)</li>
+						</ul>
+
+
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Why is Git tricky to understand?</h2>
+					</div>
+
+					<div class="content">
+						<h2>Why is Git tricky to understand?</h2>
+						<img src="./tree.png" alt="">
+
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Git File Lifecycle</h2>
+					</div>
+
+					<div class="content">
+						<h2>Git File Lifecycle</h2>
+						<p>To understand how Git works, we need to talk about the lifecycle of a Git-tracked file.</p>
+
+						<img src="./lifecycle.png" alt="">
+
+					</div>
+				</section>
+
+
+				<section>
+					<div class="slide-header">
+						<h2>Git File Lifecycle</h2>
+					</div>
+
+					<div class="content">
+						<h2>Git File Lifecycle</h2>
+						<p>There are 4 main stages of Git version controlled file:</p>
+						<ul>
+							<li>Untracked:Git is not "watching" this file; the file will not be added in the next commit</li>
+							<li>Staged: Staged files have not yet been committed to memory but they ready for your next commit</li>
+							<li>Unmodified: The file has already been committed and has not changed since the last commit</li>
+							<li>Modified: You have changes in the file since it was last committed, you will need to stage them again for the changes to be added in the next commit</li>
+							Once you have committed a file and it becomes "unmodified" then it's contents are saved in Git's memory.
+
+							Not saved in git memory: Your file is not saved until you commit the file to Git's memory
+							Saved in git memory: Only once you have committed a file, it becomes saved in Git's memory
+
+						</ul>
+
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Git File Lifecycle</h2>
+					</div>
+
+					<div class="content">
+						<h2>Git File Lifecycle</h2>
+						<p>Once you have committed a file and it becomes "unmodified" then it's contents are saved in Git's memory.</p>
+
+						<ul>
+								<li>Not saved in git memory: Your file is not saved until you commit the file to Git's memory</li>
+								<li>Saved in git memory: Only once you have committed a file, it becomes saved in Git's memory</li>
+						</ul>
+
+					</div>
+				</section>
+
+
+
+
+
+
+
+
+
+        <section>
+				  <div class="slide-header">
+            <h2>HTML Table</h2>
+				  </div>
+
+          <div class="content">
+            <h2>Modern day usage</h2>
+
+            <p>
+              The move away from tables for layout purposes has meant that tables
+              can be used for what they were originally intended to be used for...
+            </p>
+
+            <p class="fragment">
+              ...presenting tabular data!
+            </p>
+          </div>
+				</section>
+
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.min.js"></script>
+		<script>
+			Reveal.initialize({
+				transition: 'fade',
+        center: false
+			});
+		</script>
+	</body>
+</html>
