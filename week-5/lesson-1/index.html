@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>FEWD | Lesson 9</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+		<link rel="stylesheet" href="../../dist/css/main.min.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="u-bg--black">
+				  <div class="slide-header">
+            <img class="logo" src="../../dist/images/ga/ga-logo-text.png" alt="General Assembly logo">
+				  </div>
+
+          <div class="content">
+            <h1>Arrays, functions and DOM in JS</h1>
+						<span class="instructor">Gerry Mathe</span>
+          </div>
+				</section>
+
+				<section>
+				  <div class="slide-header">
+            <h2>Arrays, functions and DOM in JS</h2>
+				  </div>
+
+          <div class="content">
+            <h2 class="h1">What did you learn last lesson?</h2>
+          </div>
+				</section>
+
+				<section class="u-bg--black">
+				  <div class="slide-header">
+            <h2>Arrays, functions and DOM in JS</h2>
+				  </div>
+
+          <div class="content">
+            <h2 class="h1">Arrays</h2>
+          </div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<p>Arrays are data structures, similar in concept to lists.</p>
+						<code>
+							var beverages = ["coffee", "tea", "hot chocolate", "milk"];
+							<br>
+							var leapYears = [2016, 2020, 2024, 2028];
+						</code>
+					</div>
+					<p>Arrays can also contain different types of data, such as:</p>
+					<code>
+						var stuff = ["red", 42, "gorilla", false];
+					</code>
+					<p>However, we generally use arrays to deal with elements of the same data type.</p>
+
+
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<p>Arrays help us make the most out of our elements, allowing us to:</p>
+						<ul>
+							<li>Reorder elements.</li>
+							<li>Identify the value of one element in the list by specifying its position.</li>
+							<li>Go through the list item-by-item and manipulate each element.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+					<h2>Accessing Elements in an Array</h2>
+
+					<p>Before we dive deeper into arrays, let's learn a little about indexes.</p>
+					<p>Items in an array are stored in sequential order. Each element has an index, a number that tells us the position in the array where the element can be found.</p>
+
+					<p>Indexes allow you to access and update array values.</p>
+
+					</p>
+					</div>
+				</section>
+
+
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<p>JavaScript, like many programming languages, is zero-based, meaning that its numbering starts at 0 instead of 1.</p>
+
+						<p>So, when we start assigning index values to an array, the first position in the array will be [0], the second will be [1], and so on.</p>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<p>Take a look at the following example:</p>
+						<code>
+							var characters = ['Darth Vader', 'Princess Leia', 'Han Solo', 'Luke Skywalker'];
+						</code>
+
+						<p>As you can see, there are four strings (elements) contained within this array:</p>
+						<ul>
+							<li>The first element (index of 0) in the array is 'Darth Vader'.</li>
+							<li>The second element (index of 1) is 'Princess Leia'.</li>
+							<li>The third element (index of 2) is 'Han Solo'.</li>
+							<li>The final element (index of 3) is 'Luke Skywalker'.</li>
+						</ul>
+
+						<p>Note that the index for the first position in an array is always 0.</p>
+
+						<p>So, even though 'Princess Leia' is the second element in the array, we would need to call it out using an index of 1:</p>
+						<code>
+							characters[1]
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<p>We could save what we found in a variable like so:</p>
+						<code>
+						var favoriteCharacter = characters[1];
+						</code>
+						<p>And if we wanted to access 'Han Solo', the third element, we could access that element using the index 2:</p>
+						<code>
+							var secondFavoriteCharacter = characters[2];
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<h2>Updating Elements in an Array</h2>
+
+						<p>Changing an element in an array is just as easy.</p>
+
+						<p>To access, or retrieve, a value from an array, we will use the array name, followed by the index number of the element we want to update, wrapped in square brackets.</p>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<p>
+						We will then simply write an assignment operator as if we were assigning a value to a variable.
+						</p>
+						<code>
+						characters[1] = 'Yoda';
+						</code>
+						<p>
+						In this example, we are replacing 'Princess Leia', or the element at index 1, with 'Yoda'. The updated array will look like this:
+						</p>
+						<code>
+						['Darth Vader', 'Yoda', 'Han Solo', 'Luke Skywalker'];
+						</code>
+					</div>
+				</section>
+
+				<section class="u-bg--black">
+				  <div class="slide-header">
+            <h2>Arrays, functions and DOM in JS</h2>
+				  </div>
+
+          <div class="content">
+            <h2 class="h1">Functions</h2>
+          </div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<h2>What a function is ?<h2></h2>
+						<p</h2>Function is a term that comes out of mathematics. You may remember hearing it in your high school algebra class.</p>
+
+						<p>The basic idea of a function is simple — it's a relationship between a set of inputs and a set of outputs.</p>
+
+						<p>Take a look at the relationship between variable x and function f in this example.</p>
+
+						<p>Function ftakes the input x and spits out a single output ( f(x) ).</p>
+          </div>
+        </section>
+
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<h2>Why are functions useful?</h2>
+
+						<p>In JavaScript, a function can be:</p>
+						<ul>
+							<li>Made up of either a single reusable statement or a group of reusable statements.</li>
+							<li>Called from anywhere in the program, which allows for the statements inside a function to not be written over and over again.</li>
+							<li>Functions are especially useful because they enable a developer to segment large, unwieldy applications into smaller, more manageable pieces.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<h2>Defining and Calling Functions</h2>
+							<p>Now we know what functions are and why we use them. But how do we create them?</p>
+
+							<p>Just as we do with a variable, we must define a function before we call or "use" it.</p>
+
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+							<h2>Defining Functions</h2>
+
+							<p>The syntax for defining a function looks like this:</p>
+
+							<img src="http://circuits-assets.generalassemb.ly/prod/asset/4421/Slide-19.svg" alt="">
+					</div>
+				</section>
+
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<p>Let's take a look at an example:</p>
+
+						<p>Have you ever tried to move forward to the next page of an online form, only to be greeted by an alert that says "Please fill out all the required fields"?</p>
+
+						<p>This kind of code can be placed in a function and this function can be called anytime the user hasn't filled out a field on any form on the site. Let's code for this pop-up alert using a function expression:</p>
+
+						<code>
+						var errorAlert = function () {
+								alert("Please be sure to fill out all required fields.");
+						};
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<p>Let's take a look at the function in more detail:</p>
+
+						<p>The first line begins by declaring a variable called errorAlert. This is the name that we can then use to call that function.</p>
+						<p>This is followed by the word function, which is a keyword we use to let JS know that we are creating a function.</p>
+						<p>Next, you have a list of parameters surrounded by parentheses. Even though the parameters that can go within the parentheses are optional, the parentheses themselves are always required.</p>
+						<p>The statements inside the function will run every time the function is called. The function body must always be wrapped in curly braces { }, even when it consists of only a single statement.</p>
+
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<h2>Naming Conventions</h2>
+						<p>Now that we've learned how to define a function, let's discuss naming conventions.</p>
+
+						<p>You may have noticed how we capitalize names in JavaScript using the camelCase style.</p>
+
+						<img src="http://circuits-assets.generalassemb.ly/prod/asset/4427/Slide-25-Camel.svg" alt="">
+
+						<p>A good function name uses proper formatting and is short and succinct, but still descriptive.</p>
+
+
+					</div>
+				</section>
+
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<p>Let's take a quick look at some good and bad examples of function names, and what can cause them to break down.</p>
+						<ul>
+							<ul>
+								Bad: thisfunctioncalculatestheperimeterofarectangle
+								(no camelCase, too verbose)
+							</ul>
+
+							<ul>
+								Bad: my new function
+								(contains spaces)
+							</ul>
+
+							<ul>
+								Bad: myNewFunction
+								(doesn't explain what it does!)
+							</ul>
+
+							<ul>
+								Good: calculateArea
+								(describes what it does, short, and uses camelCase)
+							</ul>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<h2>Calling functions</h2>
+
+						<p>To run the code in a function, we call, or invoke, the function by using the function name followed by parentheses.</p>
+						<code>
+							nameOfFunction();
+						</code>
+
+						<p>Here's what this would look like in action for our errorAlert function:</p>
+						<code>
+							// First we define the function <br>
+							var errorAlert = function () {<br>
+									alert("Please be sure to fill out all required fields.");<br>
+							};<br>
+
+						// Then we can call the function to run all lines of code inside the function.<br>
+						errorAlert();<br>
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+
+						<h2>Order</h2>
+
+						<p>The code in a function will not run when the function is defined. The code will only run when the function is called.</p>
+
+						<p>One important note is that we'll want to be sure to define our functions before we call them. The function is not processed until the interpreter gets to that statement. We have to wait for the interpreter to reach that line, otherwise we will get an error:</p>
+						<code>
+							sayHello();
+
+							var sayHello = function () {
+									console.log('Hey!');
+							};
+						</code>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<p>Here we are calling the function before the function is defined. Which means we will get an error.</p>
+
+						<p>This is because the interpreter hasn't reached that line yet and doesn't know that var sayHello = function () { ... }; exists.</p>
+
+						<p>We could fix this code by moving the line where we call the function to after the function definition:</p>
+
+						<code>
+							var sayHello = function () {<br>
+									console.log('Hey!');<br>
+							};<br>
+
+							sayHello();  // Much better!<br>
+						</code>
+					</div>
+				</section>
+
+				<section class="u-bg--black">
+				  <div class="slide-header">
+            <h2>Arrays, functions and DOM in JS</h2>
+				  </div>
+
+          <div class="content">
+            <h2 class="h1">DOM</h2>
+          </div>
+				</section>
+
+				<section>
+					<div class="slide-header">
+						<h2>Arrays, functions and DOM in JS</h2>
+					</div>
+
+					<div class="content">
+						<h2>DOM Lesson</h2>
+						This part of the lesson is written in Markdown, please refer to <a href="../useful-resources/">that link</a> and open it in a markdown file
+					</div>
+				</section>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.min.js"></script>
+		<script>
+			Reveal.initialize({
+				transition: 'fade',
+        center: false
+			});
+		</script>
+	</body>
+</html>
